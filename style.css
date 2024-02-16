@@ -219,6 +219,6 @@ img{
     }
 
     .container > header form input + button{
-        padding: 0 0.7rem;
+        padding: 0.3rem 0.9rem;
     }
 }
