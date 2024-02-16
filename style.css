@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+
+body{
+    background-color: rgb(41, 41, 41);
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    object-fit: cover;
+    object-position: center;
+}
+
+.container header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.container > header{
+    padding: 1rem 2.5rem;
+}
+
+.container header h1{
+    color: white;
+    cursor: pointer;
+}
+
+.container header h1 span{
+    color: rgb(0, 183, 255);
+    text-transform: uppercase;
+}
+
+.container header form{
+    display: flex;
+}
+
+.container header form input{
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    padding: 0.4rem 1rem 0.5rem;
+    border-radius: 0.2rem 0 0 0.2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.container header form input::placeholder{
+    font-weight: 500;
+}
+
+.container .movie-container .error{
+    color: red;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+.container header form input + button{
+    font-size: 1rem;
+    padding: 0 1rem;
+    border: none;
+    background-color: #006edc;
+    color: white;
+    border-radius: 0 0.2rem 0.2rem 0;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.4s;
+}
+
+.container header form input + button:hover{
+    background-color: #034990;
+}
+
+.movie-container{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.movie-container .movie-card{
+    width: 300px;
+    height: 380px;
+    border: 2px solid rgba(255, 255, 255, 0.601);
+    border-radius: 0.3rem;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.402);
+    position: relative;
+    cursor: pointer;
+}
+
+.movie-card .text-content{
+    width: 100%;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    padding: 1.2rem;
+    background: linear-gradient(rgba(255, 255, 255, 0),#003c70c8,#014d8bbc,#0160ae);
+}
+
+.movie-card .text-content header{
+    flex-wrap: nowrap;
+    gap: 2px;
+}
+
+.movie-container .movie-card img{
+    width: 100%;
+    height: 100%;
+}
+
+.movie-card .title h3{
+    color: white;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+.movie-card .title span{
+    color: #12efec;
+    font-weight: 600;
+}
+
+.movie-card .cover button{
+    margin-top: 1rem;
+    background-color: transparent;
+    border: 1px solid white;
+    font-size: 1rem;
+    padding: 0.3rem 0.8rem 0.4rem;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.movie-card .about{
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.movie-card .line{
+    height: 2px;
+    width: 100%;
+    scale: 0;
+    background-color: rgba(255, 255, 255, 0.57);
+    transition: all 0.5s;
+}
+
+.movie-card .about p{
+    text-align: justify;
+    margin-top: 1rem;
+}
+
+.movie-card:hover .cover button{
+    background: #006edc;
+    border: 1px solid #006edc;
+}
+
+.movie-card:hover .about{
+    max-height:280px;
+    opacity: 1;
+    font-size: 0.9rem;
+    overflow-y: scroll;
+}
+
+.movie-card:hover .line{
+    scale: 1;
+    margin-top: 1rem;
+}
+
+
+.movie-card:hover .about::-webkit-scrollbar{
+    display: none;
+}
+
+@media screen and (max-width:600px){
+    .container > header{
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .container > header{
+        padding: 1rem;
+    }
+}
