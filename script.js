@@ -35,7 +35,7 @@ function generateMovieCard(poster_path, original_title, release_date, overview) 
     const movieDiv = document.createElement('div')
     movieDiv.className = "movie-card"
     movieDiv.innerHTML = `
-                <img src=${posterImage} alt=${movieTitle}>
+                <img src=${posterImage} alt=${movieTitle} loading="lazy">
                 <div class="text-content">
                      <header>
                         <div class="title">
