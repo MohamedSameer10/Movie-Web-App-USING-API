@@ -157,6 +157,7 @@ img{
     height: 2px;
     width: 100%;
     scale: 0;
+    opacity: 0;
     background-color: rgba(255, 255, 255, 0.57);
     transition: all 0.5s;
 }
@@ -180,6 +181,7 @@ img{
 
 .movie-card:hover .line{
     scale: 1;
+    opacity: 1;
     margin-top: 1rem;
 }
 
