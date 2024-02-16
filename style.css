@@ -209,6 +209,10 @@ img{
         justify-content: center;
     }
 
+    .container > header form input{
+        width: 50%;
+    }
+
     .container > header form input + button,
     .container > header form input{
         font-size: 1rem;
